@@ -7,21 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0707619B562B9C7CFBFF4F52 /* Pods_NetworkingTestiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EF784179ECB92AB485C742E /* Pods_NetworkingTestiOS.framework */; };
+		4AA41FB51F0C1ADB003AFC52 /* ToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA41FB41F0C1ADB003AFC52 /* ToDo.swift */; };
+		4AA41FBC1F0C2424003AFC52 /* ToDoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA41FBB1F0C2424003AFC52 /* ToDoDetailViewController.swift */; };
 		4AB48ECE1F0C186600E87578 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB48ECD1F0C186600E87578 /* AppDelegate.swift */; };
-		4AB48ED01F0C186600E87578 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB48ECF1F0C186600E87578 /* ViewController.swift */; };
+		4AB48ED01F0C186600E87578 /* ToDoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB48ECF1F0C186600E87578 /* ToDoListViewController.swift */; };
 		4AB48ED31F0C186600E87578 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AB48ED11F0C186600E87578 /* Main.storyboard */; };
 		4AB48ED51F0C186600E87578 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AB48ED41F0C186600E87578 /* Assets.xcassets */; };
 		4AB48ED81F0C186600E87578 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AB48ED61F0C186600E87578 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4AA41FB41F0C1ADB003AFC52 /* ToDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDo.swift; sourceTree = "<group>"; };
+		4AA41FBB1F0C2424003AFC52 /* ToDoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoDetailViewController.swift; sourceTree = "<group>"; };
 		4AB48ECA1F0C186600E87578 /* NetworkingTestiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetworkingTestiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AB48ECD1F0C186600E87578 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4AB48ECF1F0C186600E87578 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4AB48ECF1F0C186600E87578 /* ToDoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListViewController.swift; sourceTree = "<group>"; };
 		4AB48ED21F0C186600E87578 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4AB48ED41F0C186600E87578 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4AB48ED71F0C186600E87578 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4AB48ED91F0C186600E87578 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6EF784179ECB92AB485C742E /* Pods_NetworkingTestiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NetworkingTestiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB6AA23B1D19647E709E3F8D /* Pods-NetworkingTestiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetworkingTestiOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-NetworkingTestiOS/Pods-NetworkingTestiOS.release.xcconfig"; sourceTree = "<group>"; };
+		E903B16DD767066EBC8B6B00 /* Pods-NetworkingTestiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetworkingTestiOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NetworkingTestiOS/Pods-NetworkingTestiOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +37,55 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0707619B562B9C7CFBFF4F52 /* Pods_NetworkingTestiOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0BC6F5D8521D00D534889330 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6EF784179ECB92AB485C742E /* Pods_NetworkingTestiOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4AA41FB61F0C236C003AFC52 /* ToDoList */ = {
+			isa = PBXGroup;
+			children = (
+				4AB48ECF1F0C186600E87578 /* ToDoListViewController.swift */,
+			);
+			path = ToDoList;
+			sourceTree = "<group>";
+		};
+		4AA41FB71F0C2384003AFC52 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				4AA41FBB1F0C2424003AFC52 /* ToDoDetailViewController.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		4AA41FB81F0C238D003AFC52 /* AppleFiles */ = {
+			isa = PBXGroup;
+			children = (
+				4AB48ED41F0C186600E87578 /* Assets.xcassets */,
+				4AB48ED11F0C186600E87578 /* Main.storyboard */,
+				4AB48ED61F0C186600E87578 /* LaunchScreen.storyboard */,
+				4AB48ECD1F0C186600E87578 /* AppDelegate.swift */,
+			);
+			path = AppleFiles;
+			sourceTree = "<group>";
+		};
 		4AB48EC11F0C186600E87578 = {
 			isa = PBXGroup;
 			children = (
 				4AB48ECC1F0C186600E87578 /* NetworkingTestiOS */,
 				4AB48ECB1F0C186600E87578 /* Products */,
+				7502D83EC573DC06ED77BE3C /* Pods */,
+				0BC6F5D8521D00D534889330 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +100,22 @@
 		4AB48ECC1F0C186600E87578 /* NetworkingTestiOS */ = {
 			isa = PBXGroup;
 			children = (
-				4AB48ECD1F0C186600E87578 /* AppDelegate.swift */,
-				4AB48ECF1F0C186600E87578 /* ViewController.swift */,
-				4AB48ED11F0C186600E87578 /* Main.storyboard */,
-				4AB48ED41F0C186600E87578 /* Assets.xcassets */,
-				4AB48ED61F0C186600E87578 /* LaunchScreen.storyboard */,
+				4AA41FB81F0C238D003AFC52 /* AppleFiles */,
+				4AA41FB71F0C2384003AFC52 /* Detail */,
+				4AA41FB61F0C236C003AFC52 /* ToDoList */,
+				4AA41FB41F0C1ADB003AFC52 /* ToDo.swift */,
 				4AB48ED91F0C186600E87578 /* Info.plist */,
 			);
 			path = NetworkingTestiOS;
+			sourceTree = "<group>";
+		};
+		7502D83EC573DC06ED77BE3C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E903B16DD767066EBC8B6B00 /* Pods-NetworkingTestiOS.debug.xcconfig */,
+				AB6AA23B1D19647E709E3F8D /* Pods-NetworkingTestiOS.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +125,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4AB48EDC1F0C186600E87578 /* Build configuration list for PBXNativeTarget "NetworkingTestiOS" */;
 			buildPhases = (
+				9D9B646C2EDE4A6A80F7A407 /* [CP] Check Pods Manifest.lock */,
 				4AB48EC61F0C186600E87578 /* Sources */,
 				4AB48EC71F0C186600E87578 /* Frameworks */,
 				4AB48EC81F0C186600E87578 /* Resources */,
+				8119FE988F3338FD63C3BD48 /* [CP] Embed Pods Frameworks */,
+				7CE7B7FF1D942275333EF722 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,12 +187,62 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7CE7B7FF1D942275333EF722 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NetworkingTestiOS/Pods-NetworkingTestiOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8119FE988F3338FD63C3BD48 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NetworkingTestiOS/Pods-NetworkingTestiOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9D9B646C2EDE4A6A80F7A407 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4AB48EC61F0C186600E87578 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4AB48ED01F0C186600E87578 /* ViewController.swift in Sources */,
+				4AA41FB51F0C1ADB003AFC52 /* ToDo.swift in Sources */,
+				4AA41FBC1F0C2424003AFC52 /* ToDoDetailViewController.swift in Sources */,
+				4AB48ED01F0C186600E87578 /* ToDoListViewController.swift in Sources */,
 				4AB48ECE1F0C186600E87578 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -267,6 +374,7 @@
 		};
 		4AB48EDD1F0C186600E87578 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E903B16DD767066EBC8B6B00 /* Pods-NetworkingTestiOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = TFUHR2F3HQ;
@@ -281,6 +389,7 @@
 		};
 		4AB48EDE1F0C186600E87578 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB6AA23B1D19647E709E3F8D /* Pods-NetworkingTestiOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = TFUHR2F3HQ;
@@ -312,6 +421,7 @@
 				4AB48EDE1F0C186600E87578 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
