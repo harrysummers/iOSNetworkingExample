@@ -9,7 +9,7 @@
 import UIKit
 import Alamofire
 
-class ToDoDetailViewController: UIViewController {
+class ToDoDetailViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var bodyTextField: UITextField!
@@ -21,6 +21,9 @@ class ToDoDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.titleTextField.delegate = self
+        self.bodyTextField.delegate = self
         
         if (todo != nil) {
             titleTextField.text = self.todo!.title
@@ -88,6 +91,11 @@ class ToDoDetailViewController: UIViewController {
                 
             }
         }
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
     }
     
     
