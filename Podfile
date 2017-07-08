@@ -6,5 +6,4 @@ target 'NetworkingTestiOS' do
   use_frameworks!
 
   # Pods for NetworkingTestiOS
-  pod 'Alamofire'
 end
