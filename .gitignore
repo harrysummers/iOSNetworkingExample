@@ -1,0 +1,5 @@
+## Build generated
+build/
+DerivedData
+build.xcarchive
+Pods/
