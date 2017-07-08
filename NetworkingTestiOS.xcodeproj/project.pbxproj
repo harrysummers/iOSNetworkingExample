@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		0707619B562B9C7CFBFF4F52 /* Pods_NetworkingTestiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EF784179ECB92AB485C742E /* Pods_NetworkingTestiOS.framework */; };
+		4A88CAFE1F11305E008BA6E8 /* AsyncWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A88CAFD1F11305E008BA6E8 /* AsyncWebService.swift */; };
+		4A88CB001F1133FB008BA6E8 /* ToDoWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A88CAFF1F1133FB008BA6E8 /* ToDoWebService.swift */; };
+		4A88CB021F1134CC008BA6E8 /* ToDoMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A88CB011F1134CC008BA6E8 /* ToDoMapper.swift */; };
 		4AA41FB51F0C1ADB003AFC52 /* ToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA41FB41F0C1ADB003AFC52 /* ToDo.swift */; };
 		4AA41FBC1F0C2424003AFC52 /* ToDoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA41FBB1F0C2424003AFC52 /* ToDoDetailViewController.swift */; };
 		4AB48ECE1F0C186600E87578 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB48ECD1F0C186600E87578 /* AppDelegate.swift */; };
@@ -18,6 +21,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4A88CAFD1F11305E008BA6E8 /* AsyncWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncWebService.swift; sourceTree = "<group>"; };
+		4A88CAFF1F1133FB008BA6E8 /* ToDoWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoWebService.swift; sourceTree = "<group>"; };
+		4A88CB011F1134CC008BA6E8 /* ToDoMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoMapper.swift; sourceTree = "<group>"; };
 		4AA41FB41F0C1ADB003AFC52 /* ToDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDo.swift; sourceTree = "<group>"; };
 		4AA41FBB1F0C2424003AFC52 /* ToDoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoDetailViewController.swift; sourceTree = "<group>"; };
 		4AB48ECA1F0C186600E87578 /* NetworkingTestiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetworkingTestiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -50,6 +56,24 @@
 				6EF784179ECB92AB485C742E /* Pods_NetworkingTestiOS.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4A88CAFA1F113016008BA6E8 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				4A88CAFD1F11305E008BA6E8 /* AsyncWebService.swift */,
+				4A88CAFF1F1133FB008BA6E8 /* ToDoWebService.swift */,
+				4A88CB011F1134CC008BA6E8 /* ToDoMapper.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		4A88CB031F11483E008BA6E8 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				4AA41FB41F0C1ADB003AFC52 /* ToDo.swift */,
+			);
+			path = Objects;
 			sourceTree = "<group>";
 		};
 		4AA41FB61F0C236C003AFC52 /* ToDoList */ = {
@@ -100,10 +124,11 @@
 		4AB48ECC1F0C186600E87578 /* NetworkingTestiOS */ = {
 			isa = PBXGroup;
 			children = (
+				4A88CB031F11483E008BA6E8 /* Objects */,
 				4AA41FB81F0C238D003AFC52 /* AppleFiles */,
+				4A88CAFA1F113016008BA6E8 /* Utilities */,
 				4AA41FB71F0C2384003AFC52 /* Detail */,
 				4AA41FB61F0C236C003AFC52 /* ToDoList */,
-				4AA41FB41F0C1ADB003AFC52 /* ToDo.swift */,
 				4AB48ED91F0C186600E87578 /* Info.plist */,
 			);
 			path = NetworkingTestiOS;
@@ -240,10 +265,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A88CB021F1134CC008BA6E8 /* ToDoMapper.swift in Sources */,
 				4AA41FB51F0C1ADB003AFC52 /* ToDo.swift in Sources */,
 				4AA41FBC1F0C2424003AFC52 /* ToDoDetailViewController.swift in Sources */,
 				4AB48ED01F0C186600E87578 /* ToDoListViewController.swift in Sources */,
 				4AB48ECE1F0C186600E87578 /* AppDelegate.swift in Sources */,
+				4A88CB001F1133FB008BA6E8 /* ToDoWebService.swift in Sources */,
+				4A88CAFE1F11305E008BA6E8 /* AsyncWebService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +317,8 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
@@ -344,6 +374,8 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;

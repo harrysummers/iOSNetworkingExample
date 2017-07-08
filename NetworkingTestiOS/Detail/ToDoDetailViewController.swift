@@ -37,8 +37,6 @@ class ToDoDetailViewController: UIViewController, UITextFieldDelegate {
         } else {
             deleteButton.isHidden = false
         }
-        
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func cancelPressed(_ sender: Any) {
@@ -50,45 +48,46 @@ class ToDoDetailViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func deletePressed(_ sender: Any) {
-        let url = "https://sheltered-ravine-36514.herokuapp.com/api/todos/\((todo?._id)!)"
-        
-        Alamofire.request(url , method: .delete, parameters: nil, encoding: URLEncoding.default, headers: nil).responseJSON { response in
-            print(response)
-            self.navigationController?.popViewController(animated: true)
-            
-            
-        }
+        deleteTodo()
     }
     
     @IBAction func savePressed(_ sender: Any) {
-        
         if (isAddMode) {
-            let params: Parameters = [
-                "title": titleTextField.text?.description as! String,
-                "body" : bodyTextField.text?.description as! String,
-                "isCompleted" : false
-            ]
-            
-            Alamofire.request("https://sheltered-ravine-36514.herokuapp.com/api/todos", method: .post, parameters: params, encoding: URLEncoding.default, headers: nil).responseJSON { response in
-                    print(response)
-                self.dismiss(animated: true, completion: nil)
-                
-            }
+            addTodo()
         } else {
-            let params: Parameters = [
-                "title": titleTextField.text?.description as! String,
-                "body" : bodyTextField.text?.description as! String,
-                "isCompleted" : false
-                
-            ]
-            
-            let url = "https://sheltered-ravine-36514.herokuapp.com/api/todos/\((todo?._id)!)"
-            
-            Alamofire.request(url , method: .put, parameters: params, encoding: URLEncoding.default, headers: nil).responseJSON { response in
-                print(response)
+            editTodo()
+        }
+    }
+    
+    func deleteTodo() {
+        ToDoWebService.deleteTodo(todo!) {
+            DispatchQueue.main.async {
                 self.navigationController?.popViewController(animated: true)
-                
-                
+            }
+        }
+    }
+    
+    func addTodo() {
+        let todo = ToDo(__v: nil,
+                        _id: nil,
+                        body: (bodyTextField.text?.description),
+                        isCompleted: false,
+                        title: (titleTextField.text?.description))
+        
+        ToDoWebService.postTodo(todo) {
+            DispatchQueue.main.async {
+                self.dismiss(animated: true, completion: nil)
+            }
+        }
+    }
+    
+    func editTodo() {
+        self.todo?.body = bodyTextField.text?.description
+        self.todo?.title = titleTextField.text?.description
+        
+        ToDoWebService.putTodo(todo!) {
+            DispatchQueue.main.async {
+                self.navigationController?.popViewController(animated: true)
             }
         }
     }

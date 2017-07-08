@@ -9,7 +9,7 @@
 import Foundation
 
 struct ToDo: Codable {
-    var __v: Int
+    var __v: Int?
     var _id: String?
     var body: String?
     var isCompleted: Bool?

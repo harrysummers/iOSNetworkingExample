@@ -12,45 +12,32 @@ import Alamofire
 class ToDoListViewController: UITableViewController {
     
     var todos = [ToDo]()
+    var activityIndicator: UIActivityIndicatorView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a
         self.title = "ToDos"
-        
+    }
+    
+    func startSpinner() {
+        activityIndicator = UIActivityIndicatorView()
+        activityIndicator?.center = self.view.center
+        activityIndicator?.hidesWhenStopped = true
+        activityIndicator?.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
+        view.addSubview(activityIndicator!)
+        activityIndicator?.startAnimating()
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        var activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
-        activityIndicator.center = self.view.center
-        activityIndicator.hidesWhenStopped = true
-        activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
-        view.addSubview(activityIndicator)
-        activityIndicator.startAnimating()
-        todos = []
-        
-        DispatchQueue.global().async {
-            Alamofire.request("https://sheltered-ravine-36514.herokuapp.com/api/todos").responseJSON { response in
-                
-                let resultArray = response.result.value as! NSArray
-                
-                for todoDict in resultArray {
-                    let jsonTodo = todoDict as! NSDictionary
-                    let version = jsonTodo.value(forKey: "__v") as! Int
-                    let id = jsonTodo.value(forKey: "_id") as! String
-                    let body = jsonTodo.value(forKey: "body") as! String
-                    let isCompleted = jsonTodo.value(forKey: "isCompleted") as! Bool
-                    let title = jsonTodo.value(forKey: "title") as! String
-                    
-                    let todo = ToDo(__v: version, _id: id, body: body, isCompleted: isCompleted, title: title)
-                    self.todos.append(todo)
-                    DispatchQueue.main.async {
-                        
-                        self.tableView.reloadData()
-                        activityIndicator.stopAnimating()
-                    }
-                }
+        startSpinner()
+        ToDoWebService.fetchTodos {result in
+            self.todos = result
+            DispatchQueue.main.async {
+                self.activityIndicator?.stopAnimating()
+                self.tableView.reloadData()
             }
+            
         }
     }
     
